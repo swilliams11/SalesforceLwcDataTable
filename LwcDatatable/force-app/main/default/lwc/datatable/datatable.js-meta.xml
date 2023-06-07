@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+     <isExposed>true</isExposed>
+
+      <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__FlowScreen</target>
+    </targets>
+
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="strRecordId" type="String" label="Current Record Id" 
+                        description="Id of the current record"/>
+        </targetConfig>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="data" type="@salesforce/schema/namespace__Objectname" label="Array of data that should be displayed in the table." 
+                        description="Id of the current record"/>
+        </targetConfig>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="columns" type="String" label="columns" 
+                        description="This is a JavaScript object that defines the columns you want to use in the data table."/>
+        </targetConfig>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="editedData" type="@salesforce/schema/namespace__Objectname" label="Edited Data" 
+                        description="This is supposed to be an array of rows that were edited by the user."/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
